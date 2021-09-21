@@ -3,7 +3,7 @@ Char  = Local.Character
 touched,tpdback = false, false
 Local.CharacterAdded:connect(function(char)
     if script.Disabled ~= true then
-        wait(.25)
+        wait(.1)
         loc = Char.HumanoidRootPart.Position
         Char:MoveTo(box.Position + Vector3.new(0,.5,0))
     end
@@ -28,7 +28,7 @@ box.Touched:connect(function(part)
             function apply()
                 if script.Disabled ~= true then
                     no = Char.HumanoidRootPart:Clone()
-                    wait(.25)
+                    wait(0.1)
                     Char.HumanoidRootPart:Destroy()
                     no.Parent = Char
                     Char:MoveTo(loc)
